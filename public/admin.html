@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="images/logo.png" class="h-8" alt="Record Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">СК Рекорд</span>
+        </a>
+        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div id="mega-menu-full" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+            <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+                <li>
+                    <a href="authorization.html" class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Назад</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container px-5 py-0 mx-auto flex justify-center mt-4">
+    <div id="accordion-collapse" data-accordion="collapse">
+      <h2 id="accordion-collapse-heading-1">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+          <span>Админ панель</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Добро пожаловать в административную панель – ваш персональный инструмент управления всеми аспектами веб-приложения. Здесь вы найдете все необходимые функции для эффективного управления пользователями, контентом, настройками и безопасностью.</p>
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-3">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+          <span>Какие функции?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Добавление, изменение и удаление данных:
+            административная панель обеспечивает простой и эффективный способ управления контентом вашего веб-приложения.
+            Добавление данных:
+            с помощью функции добавления данных вы можете легко создавать новые записи, добавлять новый контент и расширять функционал вашего приложения. Новые статьи, изображения, видео или другие элементы могут быть добавлены с несколькими простыми шагами.
+            Изменение данных:
+            изменение данных позволяет вам обновлять или корректировать существующий контент. Это может включать в себя изменение текста, обновление изображений или внесение других изменений, необходимых для поддержания актуальности вашего веб-приложения.
+            Удаление данных:
+            функция удаления данных предоставляет возможность безопасного и надежного удаления устаревшего или неактуального контента. Это помогает поддерживать чистоту и аккуратность вашего веб-приложения, освобождая место для новых материалов и обновлений.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container px-5 py-0 mx-auto flex justify-center mt-4">
+    <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+          <li class="me-2">
+              <button id="news-tab" data-tabs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="true" class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">Новости</button>
+          </li>
+          <li class="me-2">
+              <button id="team-tab" data-tabs-target="#team" type="button" role="tab" aria-controls="team" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Команда тренеров</button>
+          </li>
+          <li class="me-2">
+            <button id="event-tab" data-tabs-target="#event" type="button" role="tab" aria-controls="event" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">События</button>
+          </li>  
+          <li class="me-2">
+            <button id="account-tab" data-tabs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Аккаунты</button>
+          </li> 
+          <li class="me-2">
+            <button id="forum-tab" data-tabs-target="#forum" type="button" role="tab" aria-controls="forum" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Модерация форума</button>
+          </li> 
+          <li class="me-2">
+            <button id="contact-tab" data-tabs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Обратная связь</button>
+          </li>
+          <li class="me-2">
+            <button id="disk-tab" data-tabs-target="#disk" type="button" role="tab" aria-controls="disk" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Диск</button>
+          </li>
+          <li class="me-2">
+            <button id="rating-tab" data-tabs-target="#rating" type="button" role="tab" aria-controls="rating" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Рейтинг спортсменов</button>
+          </li>
+        </ul>
+        <div id="defaultTabContent">
+            <div class="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="news" role="tabpanel" aria-labelledby="news-tab">
+                <div class="relative w-full rounded-lg overflow-hidden">
+                    <ul id="newsList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+                    <form class="mt-4">
+                        <div class="grid gap-6 mb-6 md:grid-cols-2">
+                            <div>
+                                <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Дата</label>
+                                <input type="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                            </div>
+                            <div>
+                                <label for="heading" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Заголовок</label>
+                                <input type="text" id="heading" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Областной чемпионат"/>
+                            </div>
+                            <div>
+                                <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Контент</label>
+                                <input type="text" id="content" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Наш клуб одержал победу"/>
+                            </div>  
+                            <div>
+                                <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Фотография</label>
+                                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="image" type="file">
+                                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">JPG (MAX. 1500x1500px).</p>
+                            </div>
+                        </div>
+                        <button type="button" id="addbutton" class="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Добавить</button>
+                    </form>
+                </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="team" role="tabpanel" aria-labelledby="team-tab">
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <ul id="teamList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+                <form class="mt-4">
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="surname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Фамилия</label>
+                            <input type="text" id="surname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Петров"/>
+                        </div>
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Имя</label>
+                            <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Дмитрий"/>
+                        </div>
+                        <div>
+                            <label for="patronymic" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Отчество</label>
+                            <input type="text" id="patronymic" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Алексеевич"/>
+                        </div>
+                        <div>
+                          <label for="post" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Должность</label>
+                          <input type="text" id="post" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Тренер по тхэквондо"/>
+                        </div>   
+                        <div>
+                            <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Фотография</label>
+                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="imageteam" type="file">
+                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">JPEG (MAX. 1500x1500px).</p>
+                        </div>
+                    </div>
+                    <button type="button" id="addbuttonteam" class="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Добавить</button>
+                </form>
+              </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="event" role="tabpanel" aria-labelledby="event-tab">
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <ul id="eventsList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+                <form class="mt-4">
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Дата</label>
+                            <input type="date" id="dateevent" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                        </div>
+                        <div>
+                            <label for="event" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Событие</label>
+                            <input type="text" id="nameevent" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Областной чемпионат"/>
+                        </div>
+                    </div>
+                    <button type="button" id="addbuttonevent" class="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Добавить</button>
+                </form>
+              </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="account" role="tabpanel" aria-labelledby="account-tab">
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <ul id="accountList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+                <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 mt-4" role="alert">
+                  <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                  </svg>
+                  <span class="sr-only">Info</span>
+                  <div>
+                    <span class="font-medium">Спортсмены!</span> Заполнение данных для создания учётной записи спортсмена.
+                  </div>
+                </div>
+                <form class="mt-4">
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Логин</label>
+                            <input type="text" id="login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ivanovivan"/>
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Пароль</label>
+                            <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="••••••••"/>
+                        </div>
+                        <div>
+                          <label for="surname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Фамилия</label>
+                          <input type="text" id="surnameathletes" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иванов"/>
+                        </div>
+                        <div>
+                          <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Имя</label>
+                          <input type="text" id="nameathletes" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иван"/>
+                        </div>
+                        <div>
+                          <label for="patronymic" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Отчество</label>
+                          <input type="text" id="patronymicathletes" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иванович"/>
+                        </div>
+                        <div>
+                          <label for="coachid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Тренер</label>
+                          <select id="coachid" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Выберите тренера</option>
+                            <option value="-NtHM-SDFyQjxk6434C5">Волокитин Борис Юрьевич</option>
+                            <option value="-Nv1vEHh9ZvRc_f-0RpQ">Гусев Артём Олегович</option>
+                            <option value="">Голубев Даниил Русланович</option>
+                            <option value="">Анисимов Даниил Владиславович</option>
+                          </select>
+                        </div> 
+                    </div>
+                    <button type="button" id="createAccountButton" class="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Добавить</button>
+                </form>
+              </div>
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 mt-4" role="alert">
+                  <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                  </svg>
+                  <span class="sr-only">Info</span>
+                  <div>
+                    <span class="font-medium">Тренеры!</span> Заполнение данных для создания учётной записи тренера.
+                  </div>
+                </div>
+                <form class="mt-4">
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="logincoach" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Логин</label>
+                            <input type="text" id="logincoach" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ivanovivan"/>
+                        </div>
+                        <div>
+                            <label for="passwordcoach" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Пароль</label>
+                            <input type="password" id="passwordcoach" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="••••••••"/>
+                        </div>
+                        <div>
+                          <label for="surnamecoach" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Фамилия</label>
+                          <input type="text" id="surnamecoach" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иванов"/>
+                        </div>
+                        <div>
+                          <label for="namecoach" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Имя</label>
+                          <input type="text" id="namecoach" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иван"/>
+                        </div>
+                        <div>
+                          <label for="patronymiccoach" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Отчество</label>
+                          <input type="text" id="patronymiсcoach" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иванович"/>
+                        </div>
+                    </div>
+                    <button type="button" id="createAccountButtoncoach" class="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Добавить</button>
+                </form>
+              </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="forum" role="tabpanel" aria-labelledby="forum-tab">
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <ul id="forumList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+              </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <ul id="contactsList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+              </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="disk" role="tabpanel" aria-labelledby="disk-tab">
+              <div class="relative w-full h-0 rounded-lg overflow-hidden" style="padding-bottom: 56.25%;">
+                <iframe class="absolute inset-0 w-full h-full rounded-lg" src="https://drive.google.com/embeddedfolderview?id=1_HJndHS7ir08fGzqTESPANcmKBkMxne5#grid" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="rating" role="tabpanel" aria-labelledby="rating-tab">
+              <div class="relative w-full rounded-lg overflow-hidden">
+                <ul id="ratingsList" class="w-68 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white ml-auto mr-auto max-h-64 overflow-y-auto rounded-lg"></ul>
+                <form class="mt-4">
+                  <div class="grid gap-6 mb-6 md:grid-cols-2">
+                      <div>
+                          <label for="gmedalsregionaltwo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Золото на областных соревнованиях</label>
+                          <input type="text" id="gmedalsregionaltwo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="38"/>
+                      </div>
+                      <div>
+                        <label for="gmedalsregional" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Золото на региональных соревнованиях</label>
+                        <input type="text" id="gmedalsregional" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12"/>
+                      </div>
+                      <div>
+                        <label for="gmedalsallrussian" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Золото на всероссийских соревнованиях</label>
+                        <input type="text" id="gmedalsallrussian" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="30"/>
+                      </div>
+                      <div>
+                        <label for="smedalsregionaltwo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Серебро на областных соревнованиях</label>
+                        <input type="text" id="smedalsregionaltwo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="18"/>
+                      </div>
+                      <div>
+                        <label for="smedalsregional" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Серебро на региональных соревнованиях</label>
+                        <input type="text" id="smedalsregional" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="17"/>
+                      </div>
+                      <div>
+                        <label for="smedalsallrussian" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Серебро на всероссийских соревнованиях</label>
+                        <input type="text" id="smedalsallrussian" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="41"/>
+                      </div>
+                      <div>
+                        <label for="bmedalsregionaltwo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Бронза на областных соревнованиях</label>
+                        <input type="text" id="bmedalsregionaltwo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="8"/>
+                      </div>
+                      <div>
+                        <label for="bmedalsregional" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Бронза на региональных соревнованиях</label>
+                        <input type="text" id="bmedalsregional" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="14"/>
+                      </div>
+                      <div>
+                        <label for="bmedalsallrussian" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Бронза на всероссийских соревнованиях</label>
+                        <input type="text" id="bmedalsallrussian" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="41"/>
+                      </div>
+                      <div>
+                          <label for="surnamerating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Фамилия</label>
+                          <input type="text" id="surnamerating" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иванов"/>
+                      </div>
+                      <div>
+                        <label for="namerating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Имя</label>
+                        <input type="text" id="namerating" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иван"/>
+                      </div>
+                      <div>
+                        <label for="patronymicrating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Отчество</label>
+                        <input type="text" id="patronymicratings" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Иванович"/>
+                      </div>
+                      <div>
+                        <label for="guprating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ученическая степень</label>
+                        <input type="text" id="guprating" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="4 гуп"/>
+                      </div>
+                  </div>
+                  <button type="button" id="addratingButton" class="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Добавить</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
